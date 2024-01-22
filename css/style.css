@@ -61,9 +61,14 @@ a.logo{
    font-size: 1.8em;
    font-weight:800;
    color:#fff;
+   padding-bottom:30px;
 }
 nav{
     width:53%;
+}
+.main-nav>li{
+    width:14%;
+    padding-bottom:30px;
 }
 .main-nav>li>a{
     font-size: 1.4em;
@@ -90,6 +95,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     width:300px;
+    padding-bottom:30px;
 }
 .searchform{
    border:1px solid #fff;
@@ -328,6 +334,78 @@ video.vdo{
     font-size:1em;
     font-weight:500;
     width:220px;
+}
+
+/**** d-submenu ****/
+.d-submenu-main{
+    display:none;
+}
+ul.d-submenu{
+   position:absolute;
+   z-index:999;
+   background:#fff;
+   width:100%;
+   top:100px;
+   left:0;
+   color:#333;
+   list-style-type:none;
+   padding:0;
+   margin:0;
+   display:flex;
+}
+
+ul.d-submenu>li:first-child{
+   width:25%;
+   padding:40px 30px 30px 140px;
+   border-right:1px solid #eee;
+} 
+ul.d-submenu>li:nth-child(2),
+ul.d-submenu>li:nth-child(3){
+   margin: 40px 0;
+   width:17%;
+   border-right:1px solid #eee;
+   padding-left:20px;
+   padding-right:20px;
+}
+ul.d-submenu>li:last-child{
+    padding-left:20px;
+    padding-top:40px;
+}
+.d-submenu h1{
+    font-size:3em;
+    margin:0;
+}
+.d-submenu p{
+    font-size:1.2em;
+    margin:0;
+}
+
+.d-sub-title{
+    padding:10px 20px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    font-size:1.1em;
+    font-weight:500;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:20px;
+}
+.d-submenu ul li{
+    list-style-type:disc;
+}
+.d-submenu ul li::marker{
+    color:#ccc;
+}
+.d-submenu ul li a{
+    font-weight:500;
+}
+.d-submenu ul li:hover::marker{
+    color:#16398B;
+}
+.d-submenu ul li a:hover{
+    text-decoration:underline;
+    color:#16398B !important;
 }
 @keyframes line-action {
     from{
