@@ -24,6 +24,21 @@ a:hover{
     margin-right:auto;
 }
 
+.justify-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+section{
+    padding-top: 100px;
+}
+.d-flex{
+    display: flex;
+}
 /************** HEADER ***************/
 header{
     width:100%;
@@ -43,6 +58,7 @@ header{
     z-index:1;
     border-bottom:1px solid #ccc;
     display:none;
+    box-shadow: 0,0,0,0;
 }
 .black-font{
     color:#333 !important;
@@ -390,6 +406,34 @@ ul.d-submenu>li:last-child{
     justify-content: space-between;
     align-items: center;
     margin-bottom:20px;
+    overflow:hidden;
+    position:relative;
+}
+.d-sub-title a.act{
+    color: #fff;
+}
+.d-sub-title span.act{
+    border-radius: 50%;
+    background: #061536;
+    display: block;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    text-align: center;
+}
+.d-sub-title-before{
+    background:#007aff;
+    width:130%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left: -140%;
+    z-index:-1;
+    transform: skew(-45deg);
+    transition: all 300ms;
+}
+.d-sub-title-before.d-sub-title-before-hover{
+    left: -20%;
 }
 .d-submenu ul li{
     list-style-type:disc;
@@ -407,6 +451,7 @@ ul.d-submenu>li:last-child{
     text-decoration:underline;
     color:#16398B !important;
 }
+
 @keyframes line-action {
     from{
         top:0;
@@ -482,4 +527,60 @@ ul.d-submenu>li:last-child{
         padding-left:8px;
         padding-right:8px;
     }
+}
+
+/******************** SECTION NEW *********************/
+.new-title{
+    font-size: 3.7em;
+    color: #000;
+    letter-spacing: -2px;
+}
+.new-title em{
+    font-style: normal;
+    color: #2f5bc1;
+}
+.img{
+    margin-right: 30px;
+    position: relative;
+}
+.img img{
+    object-fit: cover;
+    width: 110px;
+    height: 110px;
+}
+.img::before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 10px solid transparent;
+    outline:2px dashed #ddd;
+    animation: rolling 20s infinite linear;
+}
+
+@keyframes rolling {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }   
+}
+.desc-text h2{
+    font-size: 1.7em;
+    margin: 0;
+}
+.desc-text p{
+    margin: 0;
+    margin-top: 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.card{
+    background: rgba(244, 246, 248);
+    margin:2px;
 }
