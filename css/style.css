@@ -748,3 +748,33 @@ li.y span{
 .notice-list li a:last-child:hover{
     text-decoration: underline;
 }
+
+/***** banner ****/
+.banner-title{
+    position: relative;
+    margin-bottom: 15px;
+}
+.btns{
+    position: absolute;
+    top:0;
+    right: 0;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+.banner{
+    width: 504px;
+    height: 209px;
+    overflow: hidden;
+    position: relative;
+
+}
+.banner-in{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2016px;
+}
+.banner-in img{
+    width: 504px;
+    float: left;
+}
