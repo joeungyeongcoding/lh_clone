@@ -384,6 +384,7 @@ ul.d-submenu{
    padding:0;
    margin:0;
    display:flex;
+   border-bottom: 1px solid #eee;
 }
 
 ul.d-submenu>li:first-child{
