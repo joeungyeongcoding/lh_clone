@@ -823,3 +823,26 @@ li.y span{
     margin-top: 10px;
 
 }
+
+/***** BUSINESS INFO SECTION ****/
+
+.bcontainer{
+    width: 100%;
+}
+.business-title{
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: last baseline;
+}
+.business-title h1:first-child{
+    font-size: 3em;
+    color: blue;
+}
+.business-title h1:nth-child(2){
+    font-size: 3em;
+}
+.business-title h3{
+    margin-left: 20px;
+}
