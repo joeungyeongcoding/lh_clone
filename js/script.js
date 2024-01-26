@@ -17,6 +17,8 @@ $(function(){
         $('.main-nav a, .logo, .btn-h-line, .ri-global-line, .ri-search-line').stop().removeClass("black-font");
         $('.searchform,.btn-h-line').stop().removeClass("black-border");
       };
+
+      
   });
   //main-nav
   $('.main-nav').hover(function(){
@@ -47,8 +49,23 @@ $(function(){
   });
  
 //배너 애니메이션
- 
-  setInterval(mySlide, 5000);
+
+let bannerPlay;
+
+//clearInterval를 이용하여 애니메이션을 정지한다.
+function stopInterval(){
+    clearInterval(bannerPlay);
+    bannerPlay = null;
+}
+
+//setInterval을 이용하여 다시 시작한다.
+function playInterval(){
+    bannerPlay = setInterval(mySlide, 3000);    
+}
+
+  playInterval();
+
+  //jquery 애니메이션 함수
   function mySlide(){  
     count++;
     if(count > 4) {
@@ -63,4 +80,38 @@ $(function(){
       $('.banner-in').css('left', 0);
     });
   }
+  //애니메이션을 거꾸로 돌리는 함수
+  function myPrevSlide(){
+    count--;
+    if(count <1){
+      count = 4;
+    }
+    $('.count').text(count);
+    $('.banner-in img:last-child').clone().prependTo('.banner-in');
+    $('.banner-in img:last-child').remove();
+    $('.banner-in').css('left','-504px').animate({
+      'left':'0'
+    },500);
+  }
+
+  $('.playbtn').click(function(){
+     if($(this).hasClass('ri-stop-fill')){
+        $(this).removeClass('ri-stop-fill').addClass('ri-play-fill');
+        stopInterval();
+     }else{
+        $(this).removeClass('ri-play-fill').addClass('ri-stop-fill');
+        playInterval();
+     } 
+  });
+
+  $('.ri-arrow-left-s-line').click(function(){
+    myPrevSlide();
+ });
+
+
+  $('.ri-arrow-right-s-line').click(function(){
+     mySlide();
+  });
+
 }); //jquery
+
